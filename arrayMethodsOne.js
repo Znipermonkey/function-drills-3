@@ -106,9 +106,9 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 
 // CODE HERE
 
-const totalPlusTax  = orders.reduce((a, c)=> {
-  return a + c.price * (1 + c.tax)
-}, 0)
+const totalPlusTax  = orders.map((a, c)=> {
+  return a.price + a.price * (1 + a.tax)
+})
 console.log (totalPlusTax)
 ////////// PROBLEM 6 //////////
 
