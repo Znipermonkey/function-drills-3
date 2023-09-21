@@ -10,7 +10,9 @@ let numbers = [40, 68, 14, 90, 49];
 */
 
 // CODE HERE
-
+numbers.forEach((num)=>{
+  console.log(num / 2)
+})
 
 ////////// PROBLEM 2 //////////
 
@@ -23,7 +25,9 @@ let numbers = [40, 68, 14, 90, 49];
 */
 
 // CODE HERE
+let newArray = numbers.map((num) => num / 2)
 
+console.log(newArray)
 
 ////////// PROBLEM 3 //////////
 
@@ -50,8 +54,8 @@ let cities = [
 */
 
 // CODE HERE
-
-
+const citiesThatEndWithI = cities.filter((arr) => arr.endsWith('i'))
+console.log(citiesThatEndWithI)
 ////////// PROBLEM 4 //////////
 
 // ***** Do not edit the code below *****
@@ -85,8 +89,16 @@ let fruits = [
     Note: do a google search on how to find an element's index of an array in Javascript. There is a built-in Javascript method that would help you find an index of an element in an array.
 */
 
-// CODE HERE
-
+//CODE HERE
+fruits.forEach((fruit, index)=>{
+    if(fruit.color === 'red'){
+      console.log(`The fruit with index ${index} is an apple.`)
+    }else if(fruit.color === 'orange'){
+      console.log(`The fruit with index ${index} is an ornage.`)
+    }else{
+      console.log(`The fruit with index ${index} is niether an apple or an ornage.`)
+    }
+})
 
 
 /* 
@@ -100,7 +112,10 @@ let fruits = [
 */
 
 // COPY AND PASTE THE RESULT FROM YOUR CONSOLE (NODE CONSOLE IS YOUR TERMINAL) HERE (AS A MULTI LINES COMMENT)
-
+// The fruit with index 0 is niether an apple or an ornage.
+// The fruit with index 1 is an ornage.
+// The fruit with index 2 is niether an apple or an ornage.
+// The fruit with index 3 is an apple.
 
 
 ////////// PROBLEM 5 //////////
@@ -146,6 +161,12 @@ let foods = [
 
 // CODE HERE
 
+const riceFoods  = foods.filter((food)=> {
+  return food.tags.includes('rice')
+})
+riceFoodsPrice = riceFoods.reduce((a, c) => a + c.price, 0 )
+
+console.log(riceFoodsPrice)
 
 // THE TOTAL
-
+//36
